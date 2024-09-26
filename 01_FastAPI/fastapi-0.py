@@ -10,6 +10,10 @@ app = FastAPI() # A Python class with API functionality, creating instance 'app'
 def root():     # A Python function
     return {"message": "Hello World"}
 
+@app.get("/items")
+def read_items():
+    return {"item1": "value1", "item2": "value2"}
+
 # Other operations:
 # @app.post(), @app.delete(), @app.put()
 # Other lesser-known ones:
